@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="screen-orientation" content="portrait"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>鳄鱼先生的小麻烦</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="asset/styles/app.css">
+    <script src="asset/js/common.js"></script>
+</head>
+
+<body style="background-color:#000;">
+    <div id="app">
+        <img onclick="return false" src="./asset/images/index-bg.jpg" class="index-bg" alt="">
+        <div class="btn-group">
+            <div class="btn" @click="window.location.href='game.html'"></div>
+            <div class="btn" @click="showRuleModal = true"></div>
+        </div>
+        <div class="mine-modal" v-show="showRuleModal">
+            <div class="mine-mask">
+                <div class="rule-content">
+                    <img onclick="return false" src="./asset/images/alert-bg.png" class="alert-bg" alt="">
+                    <div class="rule-info-box">
+                        <ul>
+                            <li style="text-align: center">鳄鱼先生好多天没有刷牙了，现在鳄鱼先生的牙齿又虫子，有了裂缝，才意识到问题的严重性，所以想请小朋友帮帮忙，帮他刷牙！也告诫小朋友要每天都刷牙，别像鳄鱼先生一样</li>
+                            <li class="title">游戏规则</li>
+                            <li>1.点击开始帮助小鳄鱼刷牙</li>
+                            <li>2.点击向上、向下、向左、向右滑动即可帮助鳄鱼先生清洗口腔</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img @click="showRuleModal = false" src="./asset/images/close.jpg" class="close-img" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.3.4/vue.min.js"></script>
+    <script src="./asset/index.bundle.js?v=1"></script>
+</body>
+
+</html>

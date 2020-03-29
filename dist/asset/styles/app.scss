@@ -1,0 +1,528 @@
+@mixin imgSize ($width, $height) {
+  width: #{ $width + 'rem' };
+  height: #{ $height + 'rem' };
+}
+.index-bg, .game-bg, .bg-size {
+  @include imgSize(6.4, 10.3);
+}
+#app {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 0.6rem;
+  background: #e6ded3;
+}
+#app1 {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  background: #e6ded3;
+}
+body {
+  text-align: center;
+}
+.btn-group {
+  position: absolute;
+  top: 8.5rem;
+  left: 0;
+  right: 0;
+  width: 4.7rem;
+  margin: 0 auto;
+  z-index: 1;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  .btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.4rem;
+    position: relative;
+    z-index: 2;
+  }
+}
+.mine-modal {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  width: 6.4rem;
+  bottom: 0;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 6.4rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  .mine-mask {
+    position: absolute;
+    z-index: 21;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($color: #000000, $alpha: 0.7);
+  }
+  .rule-content, .result-content {
+    position: absolute;
+    z-index: 22;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    .rule-info-box, .result-info-box {
+      position: absolute;
+      z-index: 23;
+      top: 2rem;
+      left: 0.3rem;
+      right: 0;
+      text-align: center;
+      font-size: 0.24rem;
+      margin: 0 auto;
+      width: 3.5rem;
+      height: 6.3rem;
+      overflow: scroll;
+      ul {
+        list-style: none;
+        color: #88492f;
+        padding: 0;
+        margin-left: 0.2rem;
+        li {
+          margin: 0;
+          text-align: left;
+          margin: 0.1rem;
+          line-height: 0.4rem;
+        }
+        .title {
+          font-size: 0.28rem;
+          text-align: center;
+          margin: 0.2rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+.alert-bg {
+  @include imgSize(5.73,8.72);
+}
+.close-img {
+  @include imgSize(0.56, 0.56);
+  margin: 0.4rem;
+}
+.top-box-group {
+  max-width: 6.4rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 0.1rem;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  .box1, .box2 {
+    width: 2rem;
+    height: 0.6rem;
+    text-align: center;
+    background: #5a7c2a; 
+    font-size: 0.28rem;
+    color: #fff;
+    line-height: 0.6rem;
+  }
+  .box1 {
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+  }
+  .box2 {
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+  }
+}
+.bar-group {
+  position: absolute;
+  top: 3.4rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 3;
+  height: 3.3rem;
+  width: 4.7rem;
+}
+.bar-box-1 {
+  width: 0.5rem;
+  height: 0.7rem;
+  // background: #000;
+  position: absolute;
+  top: 0.3rem;
+  left: 0.5rem;
+  z-index: 999;
+}
+.bar-box-2 {
+  width: 0.25rem;
+  height: 1.3rem;
+  // background: #ff0;
+  position: absolute;
+  top: 0.4rem;
+  left: 0.25rem;
+  z-index: 999;
+}.bar-box-3 {
+  width: 0.4rem;
+  height: 1.7rem;
+  // background: #eee;
+  position: absolute;
+  left: 1rem;
+  top: 0.9rem;
+  z-index: 999;
+}.bar-box-4 {
+  position: absolute;
+  top: 1.1rem;
+  width: 0.4rem;
+  height: 0.9rem;
+  // background: red;
+  left: 0.5rem;
+  z-index: 999;
+}.bar-box-5 {
+  position: absolute;
+  top: 2rem;
+  left: 1.4rem;
+  width: 0.4rem;
+  height: 1rem;
+  // background: #000; 
+  z-index: 999;
+}.bar-box-6 {
+  position: absolute;
+  top: 1.3rem;
+  left: 1.8rem;
+  width: 0.6rem;
+  height: 1rem;
+  // background: #5a7c2a;
+  z-index: 999;
+}.bar-box-7 {
+  position: absolute;
+  top: 1.3rem;
+  left: 2.5rem;
+  width: 0.6rem;
+  height: 1rem;
+  // background: #88492f;
+  z-index: 999;
+}.bar-box-8 {
+  position: absolute;
+  top: 2.4rem;
+  left: 1.8rem;
+  width: 0.9rem;
+  height: 0.8rem;
+  // background: #ffb698;
+  z-index: 999;
+}.bar-box-9 {
+  position: absolute;
+  top: 2rem;
+  left: 3.2rem;
+  width: 0.6rem;
+  height: 0.9rem;
+  // background: #5234d6;
+  z-index: 999;
+}.bar-box-10 {
+  position: absolute;
+  top: 1.3rem;
+  left: 4rem;
+  width: 0.4rem;
+  height: 0.9rem;
+  // background: #000000;
+  z-index: 999;
+}.bar-box-9 {
+  position: absolute;
+  top: 2rem;
+  left: 3.2rem;
+  width: 0.6rem;
+  height: 0.9rem;
+  // background: #5234d6;
+  z-index: 999;
+}.bar-box-10 {
+  position: absolute;
+  top: 1.3rem;
+  left: 4rem;
+  width: 0.4rem;
+  height: 0.9rem;
+  // background: #000000;
+  z-index: 999;
+}.bar-box-11 {
+  position: absolute;
+  top: 1rem;
+  left: 3.5rem;
+  width: 0.4rem;
+  height: 0.9rem;
+  // background: #5234d6;
+  z-index: 999;
+}.bar-box-12 {
+  position: absolute;
+  top: 0.2rem;
+  left: 4rem;
+  width: 0.5rem;
+  height: 0.9rem;
+  // background: #000000;
+  z-index: 999;
+}.bar-box-13 {
+  position: absolute;
+  right: 0;
+  width: 0.3rem;
+  // background: red;
+  z-index: 999;
+  height: 0.8rem;
+  top: 0.8rem;
+}
+.brush-img {
+  width: 1.69rem;
+  height: 0.84rem;
+  position: absolute;
+  left: 0;
+  top: 0;  
+  z-index: 20;
+  display: none;
+}
+.brushing-up {
+  animation: up 0.2s infinite;
+}
+@keyframes up {
+  0%, 50%,100% {
+      transform: translate(0px, 0px) rotate(-10deg);
+  }
+  20% {
+      transform: translate(30px, 5px) rotate(20deg);
+  }
+  70% {
+      transform: translate(-30px, -5px) rotate(0deg);
+  }
+}
+.bacteria {
+  width: 0.36rem;
+  height: 0.36rem;
+  padding: 0.15rem;
+}
+.result-test-box {
+  margin: 0.3rem 0;
+  font-size: 0.3rem;
+  font-weight: bold;
+  color: #894931;
+  p {
+    padding: 0;
+    margin: 0.2rem 0;
+  }
+}
+.sweet-icon {
+  width: 0.64rem;
+  height: 0.64rem;
+}
+.mine-btn {
+  font-size: 0.28rem;
+  background: #fefefe;
+  border: 0;
+  width: 2.5rem;
+  height: 0.6rem;
+  border-radius: 0.1rem;
+  margin: 0.1rem 0;
+  color: #894931;
+}
+.begin-game-box {
+  position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: table;
+    z-index: 24;
+    color: #fff;
+    font-size: 0.3rem;
+    width: 4rem;
+    margin: auto;
+    height: auto;
+    text-align: center;
+}
+.game-tip-img {
+  width: 0.64rem;
+  height: 0.64rem;
+  margin: 0.3rem;
+}
+.touch {
+  animation: touch 1s infinite;
+}
+@keyframes touch {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.top {
+  animation: top 1s infinite;
+}
+@keyframes top {
+  0% {
+    transform: translate(0, 0)
+  }
+  100% {
+    transform: translate(10px,-10px)
+  }
+}
+.bottom {
+  animation: bottom 1s infinite;
+}
+@keyframes bottom {
+  0% {
+    transform: translate(0, 0)
+  }
+  100% {
+    transform: translate(-10px,10px)
+  }
+}
+.left {
+  animation: left 1s infinite;
+}
+@keyframes left {
+  0% {
+    transform: translate(0, 0)
+  }
+  100% {
+    transform: translate(-10px,-10px)
+  }
+}
+.right {
+  animation: right 1s infinite;
+}
+@keyframes right {
+  0% {
+    transform: translate(0, 0)
+  }
+  100% {
+    transform: translate(10px,-10px)
+  }
+}
+.show-box-1 {
+  position: absolute;
+  width: 6.4rem;
+  height: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 1;
+  margin: 0 auto;
+}
+.show-box-2 {
+  position: absolute;
+  width: 6.4rem;
+  height: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  margin: 0 auto;
+  z-index: 9;
+  display: none;
+}
+.show-box-3 {
+  position: absolute;
+  width: 6.4rem;
+  height: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  margin: 0 auto;
+  z-index: 11;
+  display: none;
+}
+.screen-bottom-box{
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 0.4rem;
+  overflow: hidden;
+  line-height: 0.4rem;
+  font-size: 0.3rem;
+  color: #fff;
+  span{
+      padding-right: 0.3rem;
+  }
+}
+.lighting-trees-list{
+  width:6.4rem;
+  height:0.4rem;
+  margin:0 auto;
+  white-space: nowrap;
+  overflow:hidden;
+}
+#scroll_begin,#scroll_end {
+  display: inline
+}
+.words-box {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  font-size: 0.3rem;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+  padding: 0.5rem 0.3rem;
+  box-sizing: border-box;
+  line-height: 0.45rem;
+  max-width: 6.4rem;
+  margin: 0 auto;
+}
+.btn-box {
+  position: fixed;
+  top: 9.1rem;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  font-size: 0.4rem;
+  text-align: center;
+  display: none;
+  animation: shark 0.8s infinite;
+  -webkit-animation: shark 0.8s infinite;
+  button {
+    background: #fed806;
+    font-size: 0.35rem;
+    width: 3rem;
+    height: 0.8rem;
+    color: #894930;
+    border-radius: 0.7rem;
+    border: 0;
+  }
+}
+@keyframes shark {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+// .words {
+//   position: absolute;
+//   bottom: 0;
+//   width: 100%;
+//   height: 0%;
+//   animation: run 3s forwards;
+//   background: rgba(0, 0, 0, 0.8);
+//   z-index: 2;
+//   color: #fff;
+//   font-size: 0.4rem;
+// }
+// @keyframes run {
+//   0% {
+//     height: 0%;
+//   }
+//   100% {
+//     height: 100%;
+//   }
+// }

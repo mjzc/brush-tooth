@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="screen-orientation" content="portrait"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>鳄鱼先生的小麻烦</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="asset/styles/app.css">
+    <script src="asset/js/common.js"></script>
+</head>
+
+<body>
+    <div id="app1">        
+        <div class="show-box-1">
+            <img src="./asset/images/eat.jpg" onclick="return false" class="bg-size" alt="">
+        </div>
+        <div class="show-box-2">
+            <img src="./asset/images/no-brush.jpg" onclick="return false" class="bg-size" alt="">
+        </div>
+        <div class="show-box-3">
+            <img src="./asset/images/un-brush.jpg" onclick="return false" class="bg-size" alt="">
+        </div>
+        <div class="btn-box" id="wantBrush">
+            <button @click="window.location.href='index.html'">我要刷牙</button>
+        </div>
+        <div class="words-box" id="words"></div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.3.4/vue.min.js"></script>
+    <script src="./asset/welcome.bundle.js?v=1"></script>
+</body>
+
+</html>

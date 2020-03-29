@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="screen-orientation" content="portrait"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>鳄鱼先生的小麻烦</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./asset/styles/app.css">
+    <script src="./asset/js/common.js"></script>
+</head>
+
+<body style="background-color:#000;">
+    <div style="display: none;" id="app1">
+        <img onclick="return false" src="./asset/images/game-bg1.jpg" id="gameBg" class="index-bg" alt="">
+        <div class="top-box-group">
+            <div class="box1">时间： {{ time }}s</div>
+            <div class="box2">得分： {{ score }}</div>
+        </div>
+        <div class="bar-group" id="barsBox">
+        </div>
+        <img id="mineBrush" src="./asset/images/brush.png" class="brush-img" alt="">
+        <audio src="./asset/images/brush.mp3" id="brushingMusic"></audio>
+        <!-- 结果弹框 -->
+        <div class="mine-modal" v-show="showResultModal">
+            <div class="mine-mask">
+                <div class="result-content">
+                    <img src="./asset/images/alert-bg.png" class="alert-bg" alt="">
+                    <div class="result-info-box" style="top: 2.5rem;">
+                        <div class="result-test-box">
+                            <div v-show="score >= 100">
+                                <img src="./asset/images/sweet.png" class="sweet-icon" alt="">
+                                <img src="./asset/images/sweet.png" class="sweet-icon" alt="">
+                                <img src="./asset/images/sweet.png" class="sweet-icon" alt="">
+                                <img src="./asset/images/sweet.png" class="sweet-icon" alt="">
+                                <p>小朋友，你真棒！</p>
+                                <p>记得每天都要坚持早晚刷牙哦</p>
+                            </div>
+                            <div v-show="score >= 80 && score <= 99">
+                                <img src="./asset/images/sweet.png" class="sweet-icon" alt="">
+                                <img src="./asset/images/sweet.png" class="sweet-icon" alt="">
+                                <img src="./asset/images/sweet.png" class="sweet-icon" alt="">
+                                <p>小朋友，真不错！</p>
+                                <p>记得每天都要坚持刷牙哦</p>
+                            </div>
+                            <div v-show="score >= 60 && score <= 79">
+                                <img src="./asset/images/sweet.png" class="sweet-icon" alt="">
+                                <img src="./asset/images/sweet.png" class="sweet-icon" alt="">
+                                <p>小朋友继续加油！</p>
+                                <p>嘴巴还有一点虫虫，加油刷走ta吧</p>
+                            </div>
+                            <div v-show="score < 60">
+                                <img src="./asset/images/sweet.png" class="sweet-icon" alt="">
+                                <p>小朋友，还没刷干净呢</p>
+                                <p>要刷干净牙齿，不然嘴巴有虫虫</p>
+                            </div>
+                            <div>
+                                <button class="mine-btn" @click="againGame">再刷一次</button>
+                                <button class="mine-btn" @click="window.location.href='index.html'">返回首页</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 开始游戏弹层 -->
+        <div @click="beginGame" v-show="!isBegain" class="mine-modal">
+            <div class="mine-mask"></div>
+            <div class="begin-game-box">
+                <p style="font-size: 0.2rem;">如下图所示，点击-滑动细菌即可帮助刷牙</p>
+                <img id="img_0" src="./asset/images/touch.png" class="game-tip-img" alt="">
+                <br>
+                <img id="img_1" src="./asset/images/swipe_top.png" class="game-tip-img" alt="">
+                <br>
+                <img id="img_2" src="./asset/images/swipe_bottom.png" class="game-tip-img" alt="">
+                <br>
+                <img id="img_3" src="./asset/images/swipe_left.png" class="game-tip-img" alt="">
+                <br>
+                <img id="img_4" src="./asset/images/swipe_right.png" class="game-tip-img" alt="">
+                <p>点击屏幕开始刷牙吧！</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.3.4/vue.min.js"></script>
+    <script src="./asset/game.bundle.js?v=66"></script>
+</body>
+
+</html>
