@@ -11,12 +11,12 @@
   "license": "ISC",
   "devDependencies": {
     "cross-env": "^5.0.1",
-    "webpack": "^2.6.1",
+    "webpack": "^5.75.0",
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
     "element-ui": "^2.3.3",
     "jquery": "^3.3.1",
-    "vue-loader": "^14.2.2"
+    "vue-loader": "^17.0.1"
   }
 }
